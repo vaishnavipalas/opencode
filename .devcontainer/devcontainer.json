@@ -1,0 +1,20 @@
+{
+    "name": "open code dev container",
+    "image": "oven/bun:1.3",
+
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "oven.bun-vscode",
+                "ms-vscode.live-server"                
+            ]
+        }
+    },
+
+    "forwardPorts": [8080],
+
+"postCreateCommand": "apt-get update && apt-get install -y python3 make g++ lcov && bun install"}
